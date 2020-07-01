@@ -68,7 +68,8 @@ a {
 }
 
 .section-image {
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   margin: 0 auto 1rem;
 }
 
