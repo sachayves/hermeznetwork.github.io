@@ -2,6 +2,9 @@
 @import "typography.css";
 @import "variables.css";
 
+/*
+ * DEFAULT STYLES
+ */
 body {
   font-family:
     "Modern Era",
@@ -21,6 +24,9 @@ body {
   color: var(--black);
 }
 
+/*
+ * BROWSER OVERRIDES
+ */
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,11 +43,18 @@ a {
   text-decoration: none;
 }
 
-.section {
-  width: 100%;
+/*
+ * CUSTOM STYLES
+ */
+.section-container {
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.section {
+  width: 100%;
   text-align: center;
   padding: 8rem 0;
 }
@@ -83,17 +96,28 @@ a {
 
 .section-features {
   max-width: 1024px;
-  display: flex;
   margin: 3rem auto 0;
-  justify-content: space-between;
+}
+
+.features-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.feature-wrapper {
+  flex: 0 0 33.33%;
+  min-height: 392px;
+  display: flex;
 }
 
 .feature {
-  flex: 0 0 31%;
-  min-height: 392px;
   border-radius: 20px;
+  width: 320px;
   background-color: #fffcf6;
   text-align: left;
+  margin: 1rem;
 }
 
 .feature-content {
