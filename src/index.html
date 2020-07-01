@@ -25,28 +25,32 @@
           <li class="header-nav-link-container">
             <a data-scroll
                href="#features"
-               class="header-nav-link">
+               class="header-nav-link"
+               onclick="onCloseBurgerMenu()">
               Features
             </a>
           </li>
           <li class="header-nav-link-container">
             <a href="#"
                target="_blank"
-               class="header-nav-link">
+               class="header-nav-link"
+               onclick="onCloseBurgerMenu()">
               Docs
             </a>
           </li>
           <li class="header-nav-link-container">
             <a href="https://github.com/iden3"
                target="_blank"
-               class="header-nav-link">
+               class="header-nav-link"
+               onclick="onCloseBurgerMenu()">
               Github
             </a>
           </li>
           <li class="header-nav-link-container">
             <a data-scroll
                href="#contact"
-               class="header-nav-link">
+               class="header-nav-link"
+               onclick="onCloseBurgerMenu()">
               Contact
             </a>
           </li>
@@ -208,13 +212,25 @@
     new SmoothScroll("[data-scroll]");
   </script>
   <script>
-    function onToggleBurgerMenu() {
-      var burgerElement = document.querySelector(".header-nav-container");
+    function getHeaderNavContainer() {
+      return document.querySelector(".header-nav-container");
+    }
 
-      if (burgerElement.classList.contains("header-nav-container--open")) {
-        burgerElement.classList.remove("header-nav-container--open")
+    function onToggleBurgerMenu() {
+      var headerNavContainer = getHeaderNavContainer();
+
+      if (headerNavContainer.classList.contains("header-nav-container--open")) {
+        headerNavContainer.classList.remove("header-nav-container--open")
       } else {
-        burgerElement.classList.add("header-nav-container--open")
+        headerNavContainer.classList.add("header-nav-container--open")
+      }
+    }
+
+    function onCloseBurgerMenu() {
+      var headerNavContainer = getHeaderNavContainer();
+
+      if (headerNavContainer.classList.contains("header-nav-container--open")) {
+        headerNavContainer.classList.remove("header-nav-container--open")
       }
     }
   </script>
