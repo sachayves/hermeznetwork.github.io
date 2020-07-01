@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <!-- <link rel="icon" href="img/favicon.ico" /> -->
+  <!-- <link rel="apple-touch-icon" href="img/logo192.png" /> -->
   <meta name="viewport"
         content="width=device-width, initial-scale=1" />
   <link rel="stylesheet"
@@ -15,16 +16,22 @@
   <header class="header">
     <div class="header-container">
       <h1 class="header-logo">Hermez</h1>
-      <nav>
+      <button class="header-burger-menu"
+              onclick="onToggleBurgerMenu()">
+        <img src="img/hamburger-menu.svg" />
+      </button>
+      <nav class="header-nav-container">
         <ul class="header-nav">
           <li class="header-nav-link-container">
-            <a href="#features"
+            <a data-scroll
+               href="#features"
                class="header-nav-link">
               Features
             </a>
           </li>
           <li class="header-nav-link-container">
-            <a href="#docs"
+            <a href="#"
+               target="_blank"
                class="header-nav-link">
               Docs
             </a>
@@ -37,7 +44,8 @@
             </a>
           </li>
           <li class="header-nav-link-container">
-            <a href="#contact"
+            <a data-scroll
+               href="#contact"
                class="header-nav-link">
               Contact
             </a>
@@ -59,8 +67,7 @@
       </p>
     </div>
   </section>
-  <section class="section section--primary"
-           id="features">
+  <section class="section section--primary">
     <div class="section-container">
       <img class="section-image"
            src="img/community-first.svg" />
@@ -78,7 +85,8 @@
       </p>
     </div>
   </section>
-  <section class="section section--secondary">
+  <section class="section section--secondary"
+           id="features">
     <div class="section-container">
       <img class="section-image"
            src="img/higher-purpose-network.svg" />
@@ -157,8 +165,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--secondary"
-           id="docs">
+  <section class="section section--secondary">
     <div class="section-container">
       <h2 class="section-title">Scaling capabilities explained.</h2>
       <p class="section-text">
@@ -196,6 +203,21 @@
     </div>
     </div>
   </section>
+  <script src="../node_modules/smooth-scroll/dist/smooth-scroll.min.js"></script>
+  <script>
+    new SmoothScroll("[data-scroll]");
+  </script>
+  <script>
+    function onToggleBurgerMenu() {
+      var burgerElement = document.querySelector(".header-nav-container");
+
+      if (burgerElement.classList.contains("header-nav-container--open")) {
+        burgerElement.classList.remove("header-nav-container--open")
+      } else {
+        burgerElement.classList.add("header-nav-container--open")
+      }
+    }
+  </script>
 </body>
 
 </html>
