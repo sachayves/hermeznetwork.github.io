@@ -142,4 +142,10 @@ a {
   padding: 1.5rem 4rem;
   border-radius: 46px;
   margin: 4rem auto 0;
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  opacity: 85%;
+  transform: scale(0.99);
 }
