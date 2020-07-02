@@ -241,6 +241,7 @@ body {
     position: relative;
     margin-top: 0;
     padding: 0;
+    margin-right: -1.5rem;
   }
 
   .header-nav-link-container::after {
