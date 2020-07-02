@@ -90,6 +90,7 @@ body {
 }
 
 .header-burger-menu {
+  height: 2rem;
   display: block;
   background: transparent;
 }
@@ -99,7 +100,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  margin: 1rem 0.75rem;
+  margin: 1.25rem 0.75rem;
   padding: 1rem;
   background: transparent;
 }
