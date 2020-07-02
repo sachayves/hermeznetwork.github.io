@@ -95,6 +95,7 @@ body {
 
 .header-nav-link-container {
   display: flex;
+  position: relative;
 }
 
 .header-nav-link {
@@ -106,8 +107,20 @@ body {
   width: 100%;
 }
 
-.header-nav-link:hover {
-  opacity: 85%;
+.header-nav-link-container::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  background-color: var(--black);
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.15s ease;
+}
+
+.header-nav-link-container:hover::after {
+  width: 60%;
 }
 
 .section-container {
