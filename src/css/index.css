@@ -133,7 +133,7 @@ body {
 
 .section-image {
   width: 100%;
-  max-width: 528px;
+  height: 528px;
   margin: 0 auto 1rem;
 }
 
