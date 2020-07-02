@@ -97,7 +97,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  margin: 1.25rem 0.75rem;
+  margin: 1.25rem 1rem;
   padding: 1rem;
   background: transparent;
 }
@@ -236,6 +236,10 @@ body {
 
   .header {
     padding: 2rem 1.75rem;
+  }
+
+  .header-close-burger-menu {
+    margin: 1.25rem 1.5rem;
   }
 
   .section-title {
