@@ -42,9 +42,6 @@ body {
 
 /* CUSTOM STYLES */
 .header {
-  position: absolute;
-  left: 0;
-  right: 0;
   background: var(--secondary);
   padding: 2rem 1.25rem;
 }
@@ -130,7 +127,7 @@ body {
 .section {
   width: 100%;
   text-align: center;
-  padding: 10rem 0;
+  padding: 3rem 0;
 }
 
 .section--primary {
@@ -143,8 +140,8 @@ body {
 
 .section-image {
   width: 100%;
-  height: 416px;
-  margin: 0 auto 6rem;
+  max-width: 416px;
+  margin: 0 auto 3rem;
 }
 
 .section-title {
@@ -228,8 +225,61 @@ body {
   transform: scale(0.99);
 }
 
+@media (min-width: 361px) {
+  .section {
+    padding: 6rem 0;
+  }
+
+  .section-image {
+    margin: 0 auto 4rem;
+  }
+
+  .header {
+    padding: 2rem 1.75rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+    line-height: 1.21;
+  }
+
+  .section-text {
+    font-size: 1.5rem;
+    line-height: 1.67;
+  }
+
+  .feature-wrapper {
+    flex: 0 0 33.33%;
+  }
+
+  .feature {
+    width: 320px;
+  }
+
+  .feature-content {
+    padding: 3.5rem;
+  }
+
+  .button {
+    background: var(--black);
+    color: var(--primary-light);
+    padding: 1.5rem 3.5rem;
+    border-radius: 46px;
+    margin: 4rem auto 0;
+    transition: all 0.15s ease;
+  }
+}
+
 /* RESPONSIVE BEHAVIOR */
 @media (min-width: 769px) {
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section-image {
+    margin: 0 auto 6rem;
+  }
+
   .header {
     padding: 2rem 2.25rem;
   }
@@ -278,42 +328,5 @@ body {
     font-weight: normal;
     line-height: 1.78;
     padding: 0 1.25rem;
-  }
-}
-
-@media (min-width: 321px) {
-  .header {
-    padding: 2rem 1.75rem;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    line-height: 1.21;
-  }
-
-  .section-text {
-    font-size: 1.5rem;
-    line-height: 1.67;
-  }
-
-  .feature-wrapper {
-    flex: 0 0 33.33%;
-  }
-
-  .feature {
-    width: 320px;
-  }
-
-  .feature-content {
-    padding: 3.5rem;
-  }
-
-  .button {
-    background: var(--black);
-    color: var(--primary-light);
-    padding: 1.5rem 3.5rem;
-    border-radius: 46px;
-    margin: 4rem auto 0;
-    transition: all 0.15s ease;
   }
 }
